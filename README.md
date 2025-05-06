@@ -1,5 +1,5 @@
 Fully configurable and lightweight multi select dropdown component using React and Typescript
-
+![Image](https://github.com/user-attachments/assets/bf04d164-08fa-4163-8a63-e6699c61b7bc)
 ## ✨ Features
 
 - 🕶 Zero Dependency
