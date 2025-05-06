@@ -1,0 +1,306 @@
+.rmsc {
+  --rmsc-main: #339af0;
+  --rmsc-hover: #f1f3f5;
+  --rmsc-selected: #f1f3f5;
+  --rmsc-border: #ced4da;
+  --rmsc-border-light: rgb(233, 236, 239);
+  --rmsc-gray: #adb5bd;
+  --rmsc-bg: #fff;
+  --rmsc-error: #f03e3e;
+  --rmsc-p: 10px;
+  --rmsc-radius: 4px;
+  --rmsc-h: 36px;
+  --rmsc-pill-gray: #f1f3f5;
+  --rmsc-pill-text: #495057;
+}
+
+.rmsc * {
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-size: small;
+}
+
+.rmsc .gray {
+  color: var(--rmsc-gray);
+}
+.rmsc .pillcontainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap : 6px;
+  align-items: center;
+  -webkit-box-flex-wrap: wrap;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  /* margin-left: -5px; */
+  min-height: 34px;
+
+}
+.rmsc .pill {
+  background-color: var(--rmsc-pill-gray);
+  color: var(--rmsc-pill-text);
+  /* max-width: calc(100% - 20px); */
+  cursor: default;
+  border-radius: 8px;
+  font-size: 12px;
+  height: 22px;
+  /* margin: 3px 5px; */
+  padding-left: 12px;
+  /* padding-right: 0px; */
+  font-weight: 400;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: left;
+}
+.rmsc .disabledpill{
+  /* color: gray; */
+  padding-right: 12px;
+}
+.rmsc .pilltext {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.rmsc .pillcrossbutton {
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-left: 2px;
+}
+.rmsc .pillmore{
+  padding-left: 5px;
+}
+.rmsc .dropdown-content {
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  width: 100%;
+  padding-top: 4px;
+}
+
+.rmsc .dropdown-content .panel-content {
+  overflow: hidden;
+  border-radius: var(--rmsc-radius);
+  background: var(--rmsc-bg);
+  box-shadow: "(0, 0, 0, 0.05) 0px 1px 3px, rgba(0, 0, 0, 0.05) 0px 10px 15px -5px, rgba(0, 0, 0, 0.04) 0px 7px 7px -5px";
+  border: 1px solid var(--rmsc-border-light);
+}
+
+.rmsc .dropdown-container {
+  position: relative;
+  outline: 0;
+  background-color: var(--rmsc-bg);
+  border: 1px solid var(--rmsc-border);
+  border-radius: var(--rmsc-radius);
+}
+
+.rmsc .error {
+  border-color: var(--rmsc-error);
+}
+
+.rmsc .errorText {
+  color: var(--rmsc-error);
+}
+
+.rmsc .dropdown-container[aria-disabled="true"]:focus-within {
+  box-shadow: var(--rmsc-gray) 0 0 0 1px;
+  border-color: var(--rmsc-gray);
+}
+
+.rmsc .dropdown-container:focus-within {
+  /* box-shadow: var(--rmsc-main) 0 0 0 1px; */
+  border-color: var(--rmsc-main);
+}
+
+.rmsc .dropdown-heading {
+  position: relative;
+  padding: 0 var(--rmsc-p);
+  display: flex;
+  align-items: center;
+  width: 100%;
+  /* height: var(--rmsc-h); */
+  cursor: default;
+  outline: 0;
+}
+
+.rmsc .dropdown-heading .dropdown-heading-value {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 1;
+}
+
+.rmsc .dropdown-heading-dropdown-arrow {
+  color: var(--rmsc-gray);
+}
+.rmsc .clear-selected-button {
+  cursor: pointer;
+  background: none;
+  border: 0;
+  padding: 0;
+  display: flex;
+}
+
+.rmsc .options {
+  max-height: 260px;
+  overflow-y: auto;
+  margin: 0;
+  padding-left: 0;
+}
+
+.rmsc .options li {
+  list-style: none;
+  margin: 0;
+}
+
+.rmsc .select-item {
+  box-sizing: border-box;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap : 8px;
+  padding: var(--rmsc-p);
+  outline-offset: -1px;
+  outline-color: var(--rmsc-primary);
+}
+
+.rmsc .select-item:hover {
+  background: var(--rmsc-hover);
+}
+
+/* .rmsc .select-item.selected {
+  background: var(--rmsc-selected);
+} */
+
+.rmsc .no-options {
+  padding: var(--rmsc-p);
+  text-align: center;
+  color: var(--rmsc-gray);
+}
+
+.rmsc .search {
+  width: 100%;
+  position: relative;
+  border-bottom: 1px solid var(--rmsc-border);
+}
+
+.rmsc .searchinput{
+  flex:1;
+  min-width: 60px;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  font-size: 14px;
+  padding: 0;
+  color: inherit;
+  margin-left: 10px;
+  height: 0;
+  width: 0;
+}
+
+.rmsc .searchinputactive{
+height: 22px;
+flex:1;
+min-width: 60px;
+background-color: transparent;
+border: 0;
+outline: 0;
+font-size: 14px;
+padding: 0;
+color: inherit;
+margin-left: 10px;
+width: 100%;
+
+}
+
+/* .rmsc .search input {
+  background: none;
+  height: var(--rmsc-h);
+  padding: 0 var(--rmsc-p);
+  width: 100%;
+  outline: 0;
+  border: 0;
+  font-size: 1em;
+}
+
+.rmsc .search input:focus {
+  background: var(--rmsc-hover);
+}
+
+.rmsc .search-clear-button {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: none;
+  border: 0;
+  padding: 0 calc(var(--rmsc-p) / 2);
+}
+
+.rmsc .search-clear-button [hidden] {
+  display: none;
+} */
+
+.rmsc .item-renderer {
+  display: flex;
+  align-items: center;
+  gap:8px;
+}
+
+.rmsc .item-renderer input {
+  margin: 0;
+  margin-right: 5px;
+}
+
+.rmsc .item-renderer .disabled {
+  opacity: 0.5;
+}
+.rmsc .disabled{
+  opacity: 0.5;
+}
+
+.rmsc .spinner {
+  animation: rotate 2s linear infinite;
+}
+
+.rmsc .spinner .path {
+  stroke: var(--rmsc-border);
+  stroke-width: 4px;
+  stroke-linecap: round;
+  animation: dash 1.5s ease-in-out infinite;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 150;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -35;
+  }
+  100% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -124;
+  }
+}

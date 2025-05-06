@@ -1,0 +1,44 @@
+{
+  "name": "@anusuryadevi/react-multiselect-dropdown-configurable",
+  "version": "1.0.8",
+  "description": "fully configurable react multi select component",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "rollup": "rollup -c --bundleConfigAsCjs"
+  },
+  "keywords": [
+    "multiselect",
+    "dropdown",
+    "multi",
+    "select",
+    "react"
+  ],
+  "author": "Anusuryadevi",
+  "license": "MIT",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^28.0.3",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^12.1.2",
+    "@types/react": "^19.1.2",
+    "react": "^19.1.0",
+    "rollup-plugin-dts": "^6.2.1",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "tslib": "^2.8.1",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "rollup": "^4.40.1",
+    "rollup-plugin-postcss": "^4.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anusuryadevi/react-multiselect-dropdown-configurable.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/anusuryadevi"
+  }
+}
